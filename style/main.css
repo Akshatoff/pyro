@@ -9,71 +9,150 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 :root {
-  --bg: #090909;
-  --text: #f8f9fa;
-  --secondary: #dee2e6;
-  --middle: #6c757d;
-  --primary: #495057;
+    --bg: #090909;
+    --text: #f8f9fa;
+    --secondary: #dee2e6;
+    --middle: #6c757d;
+    --primary: #495057;
+    --purple: #874ad8;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @font-face {
-  font-family: "MilkyWalky";
-  src: url("../assets/milky-walky-ligature-sans-serif/MilkyWalky-Regular.otf");
+    font-family: "MilkyWalky";
+    src: url("../assets/milky-walky-ligature-sans-serif/MilkyWalky-Regular.otf");
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+    width: 0px;
 }
+
 body,
 html {
-  width: 100%;
-  height: 100%;
-  background: var(--bg);
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
 }
 
 .section {
-  width: 100%;
-  height: 100vh;
-  background: var(--bg);
+    width: 100%;
+    height: 100vh;
+    background: var(--bg);
 }
 
 .text {
-  color: var(--text);
-  font-family: "MilkyWalky";
+    color: var(--text);
+    font-family: "MilkyWalky";
 }
 
 #home {
-  position: relative;
+    position: relative;
 }
 
 #hero {
-  width: 100%;
-  height: 100vh;
-  border-radius: 20px;
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
 }
 
 #home-heading {
-  font-size: 6rem;
-  position: absolute;
-  line-height: 6rem;
-  letter-spacing: 0.5rem;
-  width: fit-content;
-  left: 34%;
-  top: 5%;
+    font-size: 6rem;
+    position: absolute;
+    line-height: 6rem;
+    letter-spacing: 0.5rem;
+    width: fit-content;
+    left: 34%;
+    top: 5%;
 }
 
 #home-quote {
-  font-size: 8rem;
-  position: absolute;
-  line-height: 6rem;
-  letter-spacing: 0.5rem;
-  width: fit-content;
-  left: 22%;
-  top: 80%;
+    font-size: 8rem;
+    position: absolute;
+    line-height: 6rem;
+    letter-spacing: 0.5rem;
+    width: fit-content;
+    left: 22%;
+    top: 80%;
+}
+
+/* About section */
+
+#about-head {
+    font-size: 5rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    letter-spacing: 0.5rem;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-thickness: 0.4rem;
+    text-decoration-color: var(--purple);
+}
+
+#about-des {
+    width: 35rem;
+    padding-top: 4rem;
+    padding-left: 5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
+    text-align: left;
+}
+
+.code-con {
+    width: 35rem;
+    margin: 2rem 5rem;
+    background-color: #1f3088;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    perspective: 800px; /* Play with 600px–1200px */
+  perspective-origin: center;
+}
+
+.code-snip {
+    border-radius: 5px;
+    width: 90%;
+    box-shadow: 0 1px 5px #00000099;
+    transition-duration: 300ms;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-out;
+    transform: rotate3d(0);
+    transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+
+}
+
+.code-snip:hover {
+  transition-duration: 150ms;
+  box-shadow: 0 5px 20px 5px #00000044;
+
+}
+
+.pyro-image-con {
+    width: 25rem;
+    height: 35rem;
+    position: relative;
+    overflow: hidden;
+    float: right;
+    top: -35rem;
+    right: 5rem;
+}
+.pyro-img {
+    width: 140%;
+    height: 140%;
+    position: absolute;
+    top: -10%;
+    left:  -10%;
+    background-size: cover;
+    background-position: center;
+    transition:transform 0.1s ease-out;
+    will-change:transform;
+
 }

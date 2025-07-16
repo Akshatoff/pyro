@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pyrotech - Top The Reach</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     <link rel="stylesheet" href="style/main.css" />
   </head>
   <body>
@@ -12,7 +18,19 @@
       <img src="assets/hero.jpg" alt="Hero Image" class="img" id="hero" />
       <h1 class="text" id="home-quote">Top The Reach</h1>
     </div>
-    <div class="section" id="about"></div>
+    <div class="section" id="about">
+      <h1 class="text" id="about-head">About Us</h1>
+      <h2 class="text" id="about-des">
+        PYROTECH members are an elite team of student computer enthusiasts, who
+        always come out on top.
+      </h2>
+      <div class="code-con">
+        <img src="assets/code.png" alt="" class="code-snip">
+      </div>
+      <div class="pyro-image-con">
+        <img src="./assets/pyroimg.jpg" alt="Pyro tech ki image" class="pyro-img">
+      </div>
+    </div>
 
     <script type="importmap">
       {
@@ -21,6 +39,11 @@
           "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.178.0/examples/jsm/"
         }
       }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>

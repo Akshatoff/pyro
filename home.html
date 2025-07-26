@@ -1,49 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pyrotech - Top The Reach</title>
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
-    />
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     <link rel="stylesheet" href="style/main.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="section" id="home">
-      <h1 class="text" id="home-heading">PYROTECH</h1>
-      <img src="assets/hero.jpg" alt="Hero Image" class="img" id="hero" />
-      <h1 class="text" id="home-quote">Top The Reach</h1>
+        <h1 class="text" id="home-heading">PYROTECH</h1>
+        <img src="assets/hero.jpg" alt="Hero Image" class="img" id="hero" />
+        <h1 class="text" id="home-quote">Top The Reach</h1>
     </div>
     <div class="section" id="about">
-      <h1 class="text" id="about-head">About Us</h1>
-      <h2 class="text" id="about-des">
-        PYROTECH members are an elite team of student computer enthusiasts, who
-        always come out on top.
-      </h2>
-      <div class="code-con">
-        <img src="assets/code.png" alt="" class="code-snip">
-      </div>
-      <div class="pyro-image-con">
-        <img src="./assets/pyroimg.jpg" alt="Pyro tech ki image" class="pyro-img">
-      </div>
+        <h1 class="text" id="about-head">About Us</h1>
+        <h2 class="text" id="about-des">
+            PYROTECH members are an elite team of student computer enthusiasts, who
+            always come out on top.
+        </h2>
+        <div class="code-con">
+            <img src="assets/code.png" alt="" class="code-snip">
+        </div>
+        <div class="pyro-image-con">
+            <img src="./assets/pyroimg.jpg" alt="Pyro tech ki image" class="pyro-img">
+        </div>
     </div>
+    <div class="section" id="works">
+        <div class="parallax-container">
+          <div class="parallax-text">
+            <h1 class="text parallax-head">Trophy Cabinet</h1>
+            <p class="text parallax-des">
+            From Graphic Designing to Programming, there is not a single event which we haven't won yet.</p>
+          </div>
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800" alt="" class="parallax-img" data-speed="-0.5" style="top: 10%;left: 10%;width: 300px;"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800" alt="" class="parallax-img" data-speed="0.8" style="top: 20%;right: 5%;width: 400px;">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800" alt="" class="parallax-img" data-speed="0.3" style="top: 60%;left: 20%;width: 250px;">
+        </div>
 
+    </div>
+ <div class="video-container">
+          <div class="min-video-container">
+            <video autoplay muted class="pyro-video">
+              <source src="./assets/pyrovideo.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+    <div class="section" id="full-screen">
+        <div class="animation-container" id="animation-container">
+            <div class="sticky-wrapper">
+                <div class="split-view">
+                    <div class="text-pane" id="text-pane">
+                        <h2>Ordin@trix</h2>
+                        <p>It all started 21 years ago. A fusion of creativity, talent and skill is what Ordin@trix is all about. Ordin@trix has evolved through the years moving from an interschool festival at the state level to an international event. Over the years we have had students from China, Muscat, Japan and other countries as regular participants.</p>
+                    </div>
+                    <div class="media-pane" id="media-pane">
+                        <img id="animated-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="A modern workspace with multiple devices.">
+                    </div>
+                </div>
+                <div class="fullscreen-text" id="fullscreen-text">
+                    <h2>Pyrotech's Hall of Fame</h2>
+                    <p>The display of the greatest works of the greatest club to ever exist.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="importmap">
-      {
+        {
         "imports": {
           "three": "https://cdn.jsdelivr.net/npm/three@0.178.0/build/three.module.js",
           "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.178.0/examples/jsm/"
         }
       }
     </script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
     <script>
-      hljs.highlightAll();
+    hljs.highlightAll();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
@@ -52,5 +86,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
     <script src="script/main.js"></script>
-  </body>
+</body>
+
 </html>

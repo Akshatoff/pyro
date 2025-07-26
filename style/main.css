@@ -15,6 +15,7 @@ font-family: 'Roboto', sans-serif; */
     --middle: #6c757d;
     --primary: #495057;
     --purple: #874ad8;
+    --orange: #ed4c22;
 }
 
 * {
@@ -28,9 +29,6 @@ font-family: 'Roboto', sans-serif; */
     src: url("../assets/milky-walky-ligature-sans-serif/MilkyWalky-Regular.otf");
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-}
 
 body,
 html {
@@ -112,8 +110,9 @@ html {
     align-items: center;
     padding: 1rem;
     border-radius: 5px;
-    perspective: 800px; /* Play with 600px–1200px */
-  perspective-origin: center;
+    perspective: 800px;
+    /* Play with 600px–1200px */
+    perspective-origin: center;
 }
 
 .code-snip {
@@ -125,13 +124,13 @@ html {
     transition-timing-function: ease-out;
     transform: rotate3d(0);
     transform-style: preserve-3d;
-  transition: transform 0.1s ease-out;
+    transition: transform 0.1s ease-out;
 
 }
 
 .code-snip:hover {
-  transition-duration: 150ms;
-  box-shadow: 0 5px 20px 5px #00000044;
+    transition-duration: 150ms;
+    box-shadow: 0 5px 20px 5px #00000044;
 
 }
 
@@ -144,15 +143,175 @@ html {
     top: -35rem;
     right: 5rem;
 }
+
 .pyro-img {
     width: 140%;
     height: 140%;
     position: absolute;
     top: -10%;
-    left:  -10%;
+    left: -10%;
     background-size: cover;
     background-position: center;
-    transition:transform 0.1s ease-out;
-    will-change:transform;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
 
+}
+
+#works {
+    height: 200vh;
+}
+
+.parallax-container {
+    height: 150vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.parallax-text {
+    text-align: right;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+
+.parallax-text h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.parallax-text p {
+    font-size: 2rem;
+}
+
+.parallax-img {
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    will-change: transform;
+
+}
+
+.video-container {
+    width: 100%;
+    height: 100vh;
+    background: var(--orange);
+    background: linear-gradient(180deg, rgba(237, 76, 34, 1) 24%, rgba(237, 76, 34, 1) 24%, rgba(9, 9, 9, 1) 0%);
+    padding: 3rem 0 3rem 0;
+    border-radius: 20px;
+}
+
+.min-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.pyro-video {
+    height: 90%;
+    border-radius: 20px;
+    margin: -13rem auto;
+    transform: scale(0.7);
+}
+
+.animation-container {
+    position: relative;
+    width: 100%;
+}
+
+.sticky-wrapper {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.split-view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+}
+
+.text-pane, .media-pane {
+    position: absolute;
+    top:  0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.text-pane {
+    left: 50%;
+    width: 50%;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.text-pane h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    font-family: "MilkyWalky", sans-serif;
+}
+
+.text-pane p {
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.6;
+    max-width: 500px;
+    color: var(--secondary);
+    font-family: 'Poppins', sans-serif;
+}
+
+.media-pane {
+    left: 0;
+    width: 50%;
+    background-color: #111;
+    clip-path: polygon(0 3%, 64% 0, 100% 44%, 100% 100%, 0 100%);
+}
+
+.media-pane img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.fullscreen-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+    opacity: 0;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+}
+
+.fullscreen-text h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    font-family: "MilkyWalky", sans-serif;
+}
+
+.fullscreen-text p {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    font-family: 'Poppins', sans-serif;
 }

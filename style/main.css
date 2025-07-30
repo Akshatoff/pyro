@@ -216,7 +216,7 @@ html {
 .pyro-video {
     height: 90%;
     border-radius: 20px;
-    margin: -13rem auto;
+    margin: -11rem auto;
     transform: scale(0.7);
 }
 
@@ -315,3 +315,42 @@ html {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     font-family: 'Poppins', sans-serif;
 }
+
+#ordin {
+    padding-top: 110vh;
+
+}
+
+.ordin-card-img {
+    width: 80%;
+}
+
+.ordin-card {
+    width: 40rem;
+    margin-left: 10rem;
+}
+
+.ordin-card:nth-child(even) {
+    margin-left: 50rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

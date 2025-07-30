@@ -167,14 +167,14 @@ window.addEventListener("load", (event) => {
     });
 
     pyrotech_video_timeline.to(pyrovid, {
-        scaleX: 0.9,
-        scaleY: 0.9,
+        scaleX: 1.2,
+        scaleY: 1.2,
         ease: "power2.inOut",
     });
 
     pyrotech_video_timeline.to(pyrovid, {
-        scaleX: 0.7,
-        scaleY: 0.5,
+        scaleX: 0.9,
+        scaleY: 0.7,
         y: -150,
         ease: "power2.inOut",
     });
@@ -183,9 +183,11 @@ window.addEventListener("load", (event) => {
         scrollTrigger: {
             trigger: ".animation-container",
             start: "top top",
-            end: "+=200%",
+            end: "+=800px",
             scrub: 1.2,
             pin: ".sticky-wrapper",
+            markers: true,
+            pinSpacing: false,
         }
     });
 
@@ -197,7 +199,7 @@ window.addEventListener("load", (event) => {
         .to("#media-pane", {
             width: "80vh",
             height: "80vh",
-            left:"50%",
+            left: "50%",
             top: "50%",
             xPercent: -50,
             yPercent: -50,
@@ -205,23 +207,72 @@ window.addEventListener("load", (event) => {
             duration: 1
         }, 0);
 
-        tl.to("#media-pane", {
-            duration: 1,
-            width: "100vw",
-            height: "100vh",
-            xPercent: 0,
-            yPercent: 0,
-            top: 0,
-            left: 0,
-        })
+    tl.to("#media-pane", {
+        duration: 1,
+        width: "100vw",
+        height: "100vh",
+        xPercent: 0,
+        yPercent: 0,
+        top: 0,
+        left: 0,
+    })
 
-        tl.to("#fullscreen-text", {
-            opacity: 1,
-            duration: 0.5
-        }, "-=0.8");
+    tl.to("#fullscreen-text", {
+        opacity: 1,
+        duration: 0.5
+    }, "-=0.8");
 
     // Refresh ScrollTrigger after all animations are set up
     ScrollTrigger.refresh();
+
+    const first = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#first",
+            start: "top center",
+            end: "+=200px",
+            scrub: 1.2,
+        }
+    });
+    const second = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#second",
+            start: "top center",
+            end: "+=200px",
+            scrub: 1.2,
+        }
+    });
+    const third = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#third",
+            start: "top center",
+            end: "+=200px",
+            scrub: 1.2,
+        }
+    });
+    const fourth = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#fourth",
+            start: "top center",
+            end: "+=200px",
+            scrub: 1.2,
+        }
+    });
+
+    first.to("#first", {
+        x: 100,
+        duration: 1
+    });
+    second.to("#second", {
+        x: -100,
+        duration: 1
+    });third.to("#third", {
+        x: 100,
+        duration: 1
+    });fourth.to("#fourth", {
+        x: -100,
+        duration: 1
+    });
+
 });
 
 // Lenis smooth scrolling setup

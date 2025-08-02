@@ -186,7 +186,7 @@ window.addEventListener("load", (event) => {
             end: "+=800px",
             scrub: 1.2,
             pin: ".sticky-wrapper",
-            markers: true,
+            // markers: true,
             pinSpacing: false,
         }
     });
@@ -247,6 +247,7 @@ window.addEventListener("load", (event) => {
             start: "top center",
             end: "+=200px",
             scrub: 1.2,
+            markers: true,
         }
     });
     const fourth = gsap.timeline({

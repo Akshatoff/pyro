@@ -194,7 +194,7 @@ html {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     will-change: transform;
-
+    scale: 1.1;
 }
 
 .video-container {
@@ -326,12 +326,17 @@ html {
 }
 
 .ordin-card {
-    width: 40rem;
+    width: 60rem;
     margin-left: 10rem;
+    margin-top: 10rem;
+}
+
+.ordin-card:nth-child(1) {
+    margin-top: 0;
 }
 
 .ordin-card:nth-child(even) {
-    margin-left: 50rem;
+    margin-left: 40rem;
 }
 
 
